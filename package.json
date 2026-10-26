@@ -1,0 +1,48 @@
+{
+  "name": "lanpad-go",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "LAN Pad Go：本机启动、局域网免登录的实时协作文档，Go + ygo + React/Tiptap，可打包成单个可执行文件",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"go run ./cmd/lanpad\"",
+    "build": "vite build",
+    "go:build": "node scripts/build-go.mjs",
+    "go:run": "go run ./cmd/lanpad",
+    "go:test": "go test ./...",
+    "start": "go run ./cmd/lanpad",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/extension-code-block-lowlight": "^3.32.0",
+    "@tiptap/extension-collaboration": "^3.32.0",
+    "@tiptap/extension-collaboration-caret": "^3.32.0",
+    "@tiptap/extension-image": "^3.32.0",
+    "@tiptap/extension-placeholder": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "@tiptap/react": "^3.32.0",
+    "@tiptap/starter-kit": "^3.32.0",
+    "@tiptap/y-tiptap": "^3.0.10",
+    "jszip": "^3.10.1",
+    "lowlight": "^3.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "y-websocket": "^3.1.0",
+    "yjs": "^13.6.33"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "playwright-core": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "ws": "^8.22.0"
+  }
+}

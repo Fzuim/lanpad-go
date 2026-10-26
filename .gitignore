@@ -1,0 +1,18 @@
+# 依赖与构建产物
+node_modules/
+dist/
+internal/web/dist/
+release/
+.build/
+.npm-cache/
+
+# 运行时数据
+data/
+data-*/
+.env
+
+# 测试与调试产物
+.test*
+scripts/screenshot-*.png
+scripts/debug-paste.png
+*.log
